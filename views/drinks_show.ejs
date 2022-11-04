@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>Welcome to GitPub</title>
-</head>
-<body>
-    <nav>
-        <a href="/drinks">Back to Drinks</a>
-    </nav>
-
-    <div>
-
-      <main>
-        <%= drink.name %>
-        <img src="drink.image">
-        <%= drink.price %>
+  <head>
+    <meta charset="utf-8">
+    <title>gitPub</title>
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Montserrat:300,400,700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="body-overlay">
+      <header>
+        <h1>gitPub.io</h1>
+      </header>
+      <main class="show-main">
+        <h1>fooBar()</h1>
+        <h2><%= drink.name %></h2>
+        <img src=<%= drink.image + ".png"%>>
+        <h3>$<%= drink.price %></h3>
+        <a href="/drinks">go back</a>
       </main>
     </div>
-</body>
+  </body>
 </html>
