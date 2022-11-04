@@ -1,4 +1,4 @@
-const drinks = [
+const drink = [
   {
     name: 'cruddy mary',
     price: 132,
@@ -40,3 +40,5 @@ const drinks = [
     image: 'https://i.imgur.com/MbVdwZz.jpg',
   },
 ];
+
+module.exports = drink;
