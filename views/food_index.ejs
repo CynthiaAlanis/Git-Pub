@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>gitPub</title>
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body>
+    <div class="body-overlay">
+      <header>
+        <h1>Welcome to gitPub</h1>
+      </header>
+      <style type="text/css">
+        body {
+          color: blanchedalmond;
+          background-color: steelblue;
+        }
+      </style>
+        <div>
+          <ul>
+            <% for(let i = 0; i < food.length; i++) { %>
+              <li><a href="/food/<%=i%>"><%= food[i].name %></a></li>
+            <% } %>
+          </ul>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

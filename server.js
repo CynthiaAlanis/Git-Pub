@@ -4,11 +4,11 @@ const port = 3000
 
 // -- database --
 const drinks = require('./models/drinks')
-
+const food = require('./models/food.js')
 // ---static files---
 app.use(express.static('public'))
 
-// --------INDEX----------
+// --------DRINK INDEX----------
 app.get('/drinks', (req, res) => {
 	for (let drink of drinks) {
 		let splitName = drink.name.split(' ')
@@ -24,7 +24,7 @@ app.get('/drinks', (req, res) => {
 	})
 })
 
-// --------SHOW---------
+// --------DRINK SHOW---------
 app.get('/drinks/:id', (req, res) => {
 	res.render('drinks_show.ejs', {
 		drink: drinks[req.params.id],
@@ -32,6 +32,19 @@ app.get('/drinks/:id', (req, res) => {
 })
 
 
+//--------FOOD INDEX--------
+app.get('/food', (req, res) => {
+	res.render('food_index.ejs',{
+	food:food,
+})
+})
+
+//---------FOOD SHOW--------
+app.get('/food/:id', (req, res) => {
+	res.render('food_show.ejs', {
+		food: food[req.params.id],
+	})
+})
 
 
 //----LISTENER----
